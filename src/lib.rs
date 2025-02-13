@@ -1,5 +1,4 @@
 use worker::*;
-use serde::{Serialize, Deserialize};
 use serde_json::{Value};
 
 async fn get_email_post() -> Result<String> {
@@ -52,6 +51,6 @@ async fn fetch(
     _ctx: Context,
 ) -> Result<Response> {
     console_error_panic_hook::set_once();
-	let post = get_email_post().await?;
+	let _post = get_email_post().await?;
     Response::ok("Hello World!")
 }
